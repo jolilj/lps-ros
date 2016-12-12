@@ -83,7 +83,7 @@ if __name__ == "__main__":
     tag_pub = rospy.Publisher(rospy.get_namespace()+"marker", Marker,
                               queue_size=1, latch=True)
 
-    rospy.Subscriber(rospy.get_namespace()+"position", Point, callback)
+    rospy.Subscriber(rospy.get_namespace()+"crazyflie_position", Point, callback)
 
     publish_anchors(anchors_pub, anchors_positions)
     publish_copter(tag_pub, [0, 0, 0])
